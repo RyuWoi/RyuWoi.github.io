@@ -1,0 +1,50 @@
+
+
+/* CSS for hover underline */
+.nav-link {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #f1bb07; /* Warna underline */
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Membuat garis underline muncul di bawah saat dihover */
+}
+
+
+
+.jumbotron {
+    padding-top: 6rem;
+    font-family: "Lato", system-ui;
+    width: 100%;
+    height: 100vh;
+    background-image: url("img/76c0fcc2-1ecb-4509-bfa6-0cb7c6ca171c.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(250, 250, 246);
+}
+
+#Project {
+    font-family: "Lato", system-ui;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(51, 51, 51);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+    section {
+        padding-top: 5rem;
+    }
