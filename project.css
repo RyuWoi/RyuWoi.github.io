@@ -1,0 +1,41 @@
+/* CSS for hover underline */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #0dcaf0; /* Warna underline */
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Membuat garis underline muncul di bawah saat dihover */
+}
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #343a40; /* Warna dark */
+  text-decoration: none; /* Hilangkan garis bawah */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+#backToTopBtn:hover {
+  background-color: #495057; /* Warna saat di-hover */
+}

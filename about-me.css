@@ -1,0 +1,62 @@
+/* CSS for hover underline */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: ##0dcaf0; /* Warna underline */
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Membuat garis underline muncul di bawah saat dihover */
+}
+
+/* jarak */
+.section-spacing {
+  margin-top: 40vh; /* Sesuaikan dengan jarak yang diinginkan */
+  margin-bottom: 40vh; /* Sesuaikan dengan jarak yang diinginkan */
+}
+
+/* Menyesuaikan posisi container untuk menu */
+#menu-container {
+  display: flex;
+  justify-content: center; /* Memusatkan menu secara horizontal */
+  align-items: center; /* Memusatkan menu secara vertikal */
+  padding-top: 20px; /* Jarak antara menu dengan navbar */
+}
+
+/* Memberikan jarak pada elemen navbar jika diperlukan */
+.navbar {
+  padding-bottom: 10px; /* Menambah jarak antara navbar dan menu di bawahnya */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Mengambil seluruh tinggi layar */
+}
+
+/*animasi foto burem*/
+.image-container {
+  overflow: hidden; /* Menghindari overflow jika ada scaling efek */
+}
+
+.profile-picture {
+  width: 100%;
+  transition: all 0.5s ease; /* Menambahkan animasi transisi */
+  filter: grayscale(100%); /* Membuat gambar menjadi abu-abu */
+}
+
+.image-container:hover .profile-picture {
+  filter: grayscale(0%); /* Mengembalikan gambar ke warna asli */
+  transform: scale(1.05); /* Sedikit memperbesar gambar pada hover, opsional */
+}
